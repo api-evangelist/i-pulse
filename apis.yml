@@ -1,8 +1,24 @@
 aid: i-pulse
 name: I-Pulse
-description: 'I-Pulse is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  I-Pulse Inc. is a U.S.-based industrial technology company founded in 2007 by
+  Robert Friedland and Laurent Frescaline that commercializes High Pulsed Power
+  (HPP) — releasing very short, extremely high-power electrical discharges from
+  small amounts of stored energy to generate magnetic forces, shockwaves,
+  electrical arcs and electric fields. I-Pulse holds 55 patents licensed
+  exclusively to its operating businesses across natural-resource
+  transformation (I-ROX rock comminution, I-Mine, iTerra non-chemical weed
+  control, IPW), the energy transition (G-Pulse pulsed-power geothermal
+  drilling, Blue Spark Geothermal), manufacturing (Bmax electromagnetic metal
+  forming and welding, CSI Technologies high-energy capacitors) and R&D (I-Cube,
+  Typhoon). It operates from Albuquerque, New Mexico and Toulouse, France, with
+  offices in Canada, the UK and Singapore, and signed a $250 million CHIPS R&D
+  award with the U.S. Department of Commerce in 2026 for semiconductor and
+  pulsed-power development. I-Pulse is a hardware and industrial-process
+  company; it publishes no developer program, API documentation or
+  machine-readable API contract.
 url: https://raw.githubusercontent.com/api-evangelist/i-pulse/refs/heads/main/apis.yml
+image: https://www.ipulse-group.com/wp-content/uploads/2024/05/iPULSE-Logo.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +28,14 @@ created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Industrial
+- Energy
+- Mining
+- Manufacturing
+- Semiconductors
+- Geothermal
+- Deep Tech
+- Pulsed Power
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +43,48 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/i-pulse-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/i-pulse_stock/
+  url: https://www.ipulse-group.com/
+- type: About
+  url: https://www.ipulse-group.com/about-us/
+- type: Blog
+  url: https://www.ipulse-group.com/news/
+- type: Support
+  url: https://www.ipulse-group.com/contact-us/
+- type: PrivacyPolicy
+  url: https://www.ipulse-group.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/i-pulse-inc.
+- type: LLMsTxt
+  url: llms/i-pulse-llms.txt
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    I-Pulse is an industrial pulsed-power hardware and process company (I-ROX
+    comminution, G-Pulse geothermal drilling, Bmax metal forming, CSI
+    capacitors); ipulse-group.com is a WordPress marketing site whose only
+    machine-readable HTTP surface is the stock WordPress REST API at /wp-json/
+    (340 routes across wp/v2, Elementor, Yoast, HubSpot and Complianz plugin
+    namespaces, zero I-Pulse-authored namespaces), and there is no
+    api./developer./docs. host, no developer portal and no OpenAPI anywhere on
+    the domain.
+  evidence:
+  - url: https://www.ipulse-group.com/openapi.json
+    status: 404
+  - url: https://www.ipulse-group.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.ipulse-group.com/wp-json/
+    status: 200
+  - url: https://developer.ipulse-group.com/
+    status: 0
+  - url: https://www.ipulse-group.com/llms.txt
+    status: 200
+  checked: '2026-08-22'

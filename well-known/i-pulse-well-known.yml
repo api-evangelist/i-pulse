@@ -1,0 +1,34 @@
+generated: '2026-08-22'
+method: probed
+source: live HTTPS probes of https://www.ipulse-group.com/.well-known/*
+note: >-
+  Every /.well-known/ path probed on the only host I-Pulse operates
+  (www.ipulse-group.com) returned HTTP 404. The site is a WordPress marketing
+  site (Yoast SEO); its 404 handler returns a full HTML page with a 404 status,
+  so none of these responses carry a document. No WellKnown or SecurityTxt
+  pointer is emitted in apis.yml, because nothing was served. Recorded absence,
+  not an unchecked gap.
+hosts:
+- host: www.ipulse-group.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

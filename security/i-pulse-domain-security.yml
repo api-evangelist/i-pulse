@@ -1,0 +1,22 @@
+generated: '2026-08-22'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.ipulse-group.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  9 17:52:48 2026 GMT
+  hsts: false
+domains:
+- domain: ipulse-group.com
+  dnssec: true
+  caa:
+  - 0 issue "sectigo.com"
+  - 0 issuewild "digicert.com"
+  - 0 issuewild "letsencrypt.org"
+  - 0 issuewild "sectigo.com"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  spf: false
+  dmarc: true
+  dmarc_policy: quarantine
