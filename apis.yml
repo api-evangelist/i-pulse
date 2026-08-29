@@ -18,6 +18,17 @@ description: >-
   company; it publishes no developer program, API documentation or
   machine-readable API contract.
 url: https://raw.githubusercontent.com/api-evangelist/i-pulse/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.ipulse-group.com/wp-content/uploads/2024/05/iPULSE-Logo.png
 x-type: company
 x-source: harvest:secondary-market
